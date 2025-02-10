@@ -1,12 +1,9 @@
 import fastf1 as ff1
-import matplotlib.pyplot as mpl
+import matplotlib.pyplot as plt
 
-race = ff1.get_session(2024,'Monza','R')
+race = ff1.get_session(2023,'Sahkir','Q')
 race.load()
 
-drivers = ['LEC','SAI']
 
-for driver in drivers: 
-    print(race.laps.pick_drivers(drivers))
-
-
+MaxTelem = race.laps.pick_drivers('VER').pick_fastest()
+print(MaxTelem['LapTime'])
