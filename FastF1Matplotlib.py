@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 race = ff1.get_session(2023,'Sahkir','Q')
 race.load()
 
-plt.figure(10,6)
-
+plt.figure(figsize=(10, 6))
 
 drivers = ['VER']
 
