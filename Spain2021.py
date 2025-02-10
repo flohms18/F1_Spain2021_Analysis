@@ -12,10 +12,16 @@ for driver in drivers :
     car_lap = race.laps.pick_drivers(driver)
     LapNumber = car_lap['LapNumber']
     LapTime = car_lap['LapTime'].dt.total_seconds()
-    plt.plot(LapNumber, LapTime, label=driver)
 
-plt.xlabel("LapNumber")
-plt.ylabel("LapTime")
+    if driver == "VER":
+        plt.plot(LapNumber, LapTime, label=driver, color='#0600EF')
+    else : 
+        plt.plot(LapNumber, LapTime, label=driver, color='#00D2BE')
+
+        
+
+plt.xlabel("Lap")
+plt.ylabel("Time")
 plt.title("Hamilton v Verstappen")
 plt.legend()
 plt.grid(True)
