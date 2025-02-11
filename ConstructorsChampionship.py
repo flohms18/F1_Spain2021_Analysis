@@ -5,11 +5,10 @@ e = ergast_py.Ergast()
 
 
 
-standings = e.season(2024).round(3).get_constructor_standings()
+standings = e.season(2024).round(24).get_constructor_standings()
 
 for constructor in standings:
-    print(constructor.season)
-
-
+    for team in constructor.constructor_standings:
+        print(team.points)
 
 
